@@ -15,7 +15,7 @@
         -moz-osx-font-smoothing: grayscale;
 
         position: absolute;
-        background-color: black;
+        background-color: #0e0e0e;
         top: 0;
         left: 0;
         width: 99%;
@@ -26,6 +26,26 @@
         justify-content: center;
         color: white;
       }
+
+      h1 {
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 6px;
+      }
+
+      #draw {
+        margin-bottom: 12px;
+      }
+
+      #canvas {
+        height: 600px;
+        width: 800px;
+      }
     </style>
   </head>
   <body>
@@ -33,7 +53,10 @@
       >This page contains webassembly and javascript content, please enable
       javascript in your browser.</noscript
     >
-    <canvas id="mandelbrot-canvas"></canvas>
+    <h1>The Mandelbrot Set, generated with wasm 🕸️, written in Rust 🦀</h1>
+    <p id="generate"></p>
+    <p id="draw"></p>
+    <canvas id="canvas"></canvas>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
