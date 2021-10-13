@@ -44,10 +44,10 @@ const swapPair = (p1: Pair, p2: Pair) => {
 }
 
 const fixRatio = (p1: Pair, p2: Pair) => {
-    const targetRatio = 4/3
+    const targetRatio = 4 / 3
 
-    const diffX = (p2.x-p1.x)
-    const diffY  = (p2.y-p1.y)
+    const diffX = (p2.x - p1.x)
+    const diffY = (p2.y - p1.y)
 
     if (diffX >= diffY) {
         p2.x = p1.x + (diffY * targetRatio)
@@ -115,7 +115,7 @@ const drawFractal = () => {
 const drawVertLine = (x: number) => {
     x = Math.floor(x)
     for (let i = 0; i < imageData.data.length; i += 4) {
-        if (i % (4*WIDTH) == 4*x) {
+        if (i % (4 * WIDTH) == 4 * x) {
             imageData.data[i] = 255
             imageData.data[i + 1] = 255
             imageData.data[i + 2] = 255
